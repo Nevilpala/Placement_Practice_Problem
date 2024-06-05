@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 class Test2{
@@ -36,6 +38,7 @@ class Test2{
     
         if(word.length == val.length){
             MinStack minStack = new MinStack();
+            List<String> st= new ArrayList<>();
             String[] st = new String[word.length];
             for(int i = 0;i<word.length;i++){
                 String ans = "";
@@ -44,10 +47,12 @@ class Test2{
                         minStack = new MinStack();
                         break;
                     case "2":
-                        minStack.push();;
+                        minStack.push(Integer.parseInt(val[i]));
+                        st.push(null);
                         break;
                     case "3":
-                        minStack = new MinStack();
+                        minStack.pop(Integer.parseInt(val[i]));
+
                         break;
                     case "4":
                         minStack = new MinStack();
